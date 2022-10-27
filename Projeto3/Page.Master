@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="Projeto3.Page" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <link href="css/Projeto.css" rel="stylesheet" />
+    <!-- Para inserir sldies -->
+    <!-- Felxsldie: http://flexslider.woothemes.com/ -->
+    <link href="js/flexslider.css" rel="stylesheet" />
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/flexslider.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Cabeçalho -->
+        <div class="content-wrap">
+            <div class="cabecalho">
+                <!-- Logomarca -->
+                <div class="logomarca">
+                    <img src="images/marca1.png" />
+                </div>
+                
+                <!-- Titulo -->
+                <div class="barra-titulo">
+                </div>
+                <!-- Menu -->
+                <div class="barra-menu">
+                    <a href="../Default.aspx">HOME</a>
+                    <a id="Excecoes" runat="server" visible="false" href="~/Admin/ExibirExcecoe.aspx">EXIBIR EXCEÇÕES</a>
+                    <a href="../FaleConosco.aspx">CONTATO</a>
+                    <a runat="server" id="representantes" visible="false" href="~/Admin/Representantes.aspx">REPRESENTANTES</a>
+
+
+                    <a runat="server" id="Login" visible="true" href="Login.aspx">LOGIN</a>
+                    <a runat ="server" id="Logout" visible="false" href="Logout.aspx">LOGOUT</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo content-wrap">
+            <!-- ContentPlaceHolder é onde estará o conteudo da pagina -->
+            <!-- Conteudo -->
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="rodape">
+            <div class="content-wrap">
+                <div class="row">
+                    <div class="col-4">
+                        <h2>Curso ADS</h2>
+                        <h3>Fatec</h3>
+                        <h4>Americana</h4>
+                    </div>
+                    <div class="col-4">
+                        menu
+                    </div>
+                    <div class="col-4">
+                        <asp:Image ID="Image2" ImageUrl="~/images/marca1.png" runat="server" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
